@@ -1,26 +1,469 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tR-rt-F7a">
+                                <rect key="frame" x="241" y="167" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.94332200288772583" green="0.5738641619682312" blue="0.20033228397369385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="÷">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a1K-ma-4Tn"/>
+                                    <action selector="signButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Tse-r9-kLU"/>
+                                    <action selector="signButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kld-bo-mPA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSh-pG-ut8">
+                                <rect key="frame" x="80.5" y="247" width="80" height="80.5"/>
+                                <color key="backgroundColor" red="0.9082739637305699" green="0.9082739637305699" blue="0.9082739637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="8">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Ecy-Yc-On6"/>
+                                    <action selector="numberButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hew-ji-7yE"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z9b-Gw-QWd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6y-cT-jDv">
+                                <rect key="frame" x="160.5" y="247" width="80.5" height="80.5"/>
+                                <color key="backgroundColor" red="0.9082739637305699" green="0.9082739637305699" blue="0.9082739637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="9">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="NnA-1z-8fg"/>
+                                    <action selector="numberButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gL5-du-oDi"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sLg-3P-19Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki9-4t-H22">
+                                <rect key="frame" x="0.0" y="327.5" width="80.5" height="80"/>
+                                <color key="backgroundColor" red="0.9082739637305699" green="0.9082739637305699" blue="0.9082739637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="RpI-Yn-9yL"/>
+                                    <action selector="numberButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Def-LS-mhY"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wLZ-OU-r4q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PO2-T7-WS8">
+                                <rect key="frame" x="241" y="247" width="80" height="80.5"/>
+                                <color key="backgroundColor" red="0.94332200288772583" green="0.5738641619682312" blue="0.20033228397369385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="×">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g6v-i0-oqt"/>
+                                    <action selector="signButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="DJd-85-qos"/>
+                                    <action selector="signButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNY-UA-h2Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZs-Z2-F33">
+                                <rect key="frame" x="80.5" y="327.5" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.9082739637305699" green="0.9082739637305699" blue="0.9082739637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="d4F-tG-GhG"/>
+                                    <action selector="numberButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HgN-Aa-lbs"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LxI-SS-FRr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUO-fy-EV4">
+                                <rect key="frame" x="160.5" y="327.5" width="80.5" height="80"/>
+                                <color key="backgroundColor" red="0.9082739637305699" green="0.9082739637305699" blue="0.9082739637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="vBU-bP-tjw"/>
+                                    <action selector="numberButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0vf-LV-q8H"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ALO-zT-ocr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56Q-Mt-qvN">
+                                <rect key="frame" x="0.0" y="407.5" width="80.5" height="80.5"/>
+                                <color key="backgroundColor" red="0.9082739637305699" green="0.9082739637305699" blue="0.9082739637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="KuE-5E-nCT"/>
+                                    <action selector="numberButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftG-tS-HdL"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFi-77-faW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3s-nc-1el">
+                                <rect key="frame" x="241" y="327.5" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.94332200288772583" green="0.5738641619682312" blue="0.20033228397369385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PbE-MB-R7c"/>
+                                    <action selector="signButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="xJe-bB-447"/>
+                                    <action selector="signButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CLN-Qg-woX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrV-pS-fVE">
+                                <rect key="frame" x="80.5" y="407.5" width="80" height="80.5"/>
+                                <color key="backgroundColor" red="0.9082739637305699" green="0.9082739637305699" blue="0.9082739637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonDown:" destination="BYZ-38-t0r" eventType="touchCancel" id="iDF-bo-Wit"/>
+                                    <action selector="numberButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GjM-bU-mxy"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e8F-Px-ZBO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kI-Po-htn">
+                                <rect key="frame" x="160.5" y="407.5" width="80.5" height="80.5"/>
+                                <color key="backgroundColor" red="0.9082739637305699" green="0.9082739637305699" blue="0.9082739637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="BoS-yX-e8A"/>
+                                    <action selector="numberButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5OA-mL-G44"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAg-RV-F41"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djD-Cm-Wwh">
+                                <rect key="frame" x="0.0" y="488" width="160.5" height="80"/>
+                                <color key="backgroundColor" red="0.9082739637305699" green="0.9082739637305699" blue="0.9082739637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="UkO-FL-FuK"/>
+                                    <action selector="numberButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qze-RV-5uw"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Tk-bb-e6A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eN2-tM-OzT">
+                                <rect key="frame" x="241" y="407.5" width="80" height="80.5"/>
+                                <color key="backgroundColor" red="0.94332200288772583" green="0.5738641619682312" blue="0.20033228397369385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WgW-WR-XI4"/>
+                                    <action selector="signButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="hiw-XP-dLl"/>
+                                    <action selector="signButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mci-a6-mkt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8Q-IT-HZ4">
+                                <rect key="frame" x="160.5" y="488" width="80.5" height="80"/>
+                                <color key="backgroundColor" red="0.9082739637305699" green="0.9082739637305699" blue="0.9082739637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title=".">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="LSv-SV-sgg"/>
+                                    <action selector="numberButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J5K-Ug-pLl"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vVF-z4-6A7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbQ-VX-FOq">
+                                <rect key="frame" x="0.0" y="167" width="80.5" height="80"/>
+                                <color key="backgroundColor" red="0.79992932081222534" green="0.80004525184631348" blue="0.79990392923355103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="AC">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="funcButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="sgY-Dc-tlr"/>
+                                    <action selector="funcButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mC-Q8-wuy"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klC-lP-cDW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOj-Yw-LKL">
+                                <rect key="frame" x="241" y="488" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.94332200288772583" green="0.5738641619682312" blue="0.20033228397369385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="height" multiplier="1:1" id="IXw-VX-gDm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZ4-an-nmU"/>
+                                    <action selector="signButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="gNF-ma-ayb"/>
+                                    <action selector="signButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6NU-lb-Scw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l57-mv-cWe">
+                                <rect key="frame" x="16" y="72" width="288" height="85"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="72"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODu-DY-mTl">
+                                <rect key="frame" x="80.5" y="167" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.79992932081222534" green="0.80004525184631348" blue="0.79990392923355103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="⁺∕₋">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="funcButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="hgd-p7-jAt"/>
+                                    <action selector="funcButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C5j-rH-p50"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28b-UI-gcw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXS-wa-CSa">
+                                <rect key="frame" x="160.5" y="167" width="80.5" height="80"/>
+                                <color key="backgroundColor" red="0.79992932081222534" green="0.80004525184631348" blue="0.79990392923355103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="%">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="funcButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="plb-ij-U3x"/>
+                                    <action selector="funcButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ZP-b9-2tL"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XRd-RS-Qmx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxf-6j-zVh">
+                                <rect key="frame" x="0.0" y="247" width="80.5" height="80.5"/>
+                                <color key="backgroundColor" red="0.9082739637305699" green="0.9082739637305699" blue="0.9082739637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="7">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="B72-gu-bhm"/>
+                                    <action selector="numberButtonUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MDO-m7-C5T"/>
+                                    <action selector="numberButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ms-hl-FPL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l5z-4g-y2A">
+                                <rect key="frame" x="16" y="43" width="288" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="l57-mv-cWe" secondAttribute="trailing" id="02t-9v-epY"/>
+                            <constraint firstItem="V8Q-IT-HZ4" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="28T-LT-EFT"/>
+                            <constraint firstItem="V8Q-IT-HZ4" firstAttribute="leading" secondItem="djD-Cm-Wwh" secondAttribute="trailing" id="29M-P1-Pm9"/>
+                            <constraint firstItem="6kI-Po-htn" firstAttribute="leading" secondItem="DrV-pS-fVE" secondAttribute="trailing" id="2bW-dl-7y8"/>
+                            <constraint firstItem="hxf-6j-zVh" firstAttribute="top" secondItem="GbQ-VX-FOq" secondAttribute="bottom" id="43M-rA-rkJ"/>
+                            <constraint firstItem="KSh-pG-ut8" firstAttribute="leading" secondItem="hxf-6j-zVh" secondAttribute="trailing" id="4HP-lv-jKC"/>
+                            <constraint firstItem="jOj-Yw-LKL" firstAttribute="top" secondItem="eN2-tM-OzT" secondAttribute="bottom" id="4kM-3h-LZR"/>
+                            <constraint firstItem="PO2-T7-WS8" firstAttribute="leading" secondItem="t6y-cT-jDv" secondAttribute="trailing" id="5VA-V2-I8A"/>
+                            <constraint firstItem="56Q-Mt-qvN" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="5dd-dP-uQX"/>
+                            <constraint firstItem="8tR-rt-F7a" firstAttribute="top" secondItem="l57-mv-cWe" secondAttribute="bottom" constant="10" id="6HG-gT-mU7"/>
+                            <constraint firstItem="Ki9-4t-H22" firstAttribute="top" secondItem="hxf-6j-zVh" secondAttribute="bottom" id="6IE-Ev-ioA"/>
+                            <constraint firstItem="t6y-cT-jDv" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="6OZ-vm-20L"/>
+                            <constraint firstItem="KSh-pG-ut8" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="7G7-la-hmI"/>
+                            <constraint firstItem="6kI-Po-htn" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="7bw-80-4kf"/>
+                            <constraint firstItem="PO2-T7-WS8" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="9K1-QL-VkZ"/>
+                            <constraint firstItem="KSh-pG-ut8" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="ACW-Sf-7cR"/>
+                            <constraint firstItem="djD-Cm-Wwh" firstAttribute="top" secondItem="DrV-pS-fVE" secondAttribute="bottom" id="Cc4-oH-y4k"/>
+                            <constraint firstItem="8tR-rt-F7a" firstAttribute="leading" secondItem="GXS-wa-CSa" secondAttribute="trailing" id="DGg-Bs-LW4"/>
+                            <constraint firstItem="56Q-Mt-qvN" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="EJL-RG-CkR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="djD-Cm-Wwh" secondAttribute="bottom" id="Fcr-Fw-qXi"/>
+                            <constraint firstItem="dZs-Z2-F33" firstAttribute="leading" secondItem="Ki9-4t-H22" secondAttribute="trailing" id="GSw-4R-zme"/>
+                            <constraint firstItem="djD-Cm-Wwh" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" multiplier="2" id="HJH-ZO-gar"/>
+                            <constraint firstItem="DrV-pS-fVE" firstAttribute="leading" secondItem="56Q-Mt-qvN" secondAttribute="trailing" id="HZX-2m-kmc"/>
+                            <constraint firstItem="DrV-pS-fVE" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="HbC-fb-9oD"/>
+                            <constraint firstItem="dZs-Z2-F33" firstAttribute="top" secondItem="KSh-pG-ut8" secondAttribute="bottom" id="JZH-K7-W33"/>
+                            <constraint firstItem="rUO-fy-EV4" firstAttribute="leading" secondItem="dZs-Z2-F33" secondAttribute="trailing" id="Lct-kP-3I6"/>
+                            <constraint firstItem="l5z-4g-y2A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MXs-tC-28L"/>
+                            <constraint firstItem="dZs-Z2-F33" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="MZT-cH-fQ0"/>
+                            <constraint firstItem="6kI-Po-htn" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="OK3-MF-qwd"/>
+                            <constraint firstItem="rUO-fy-EV4" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="OTd-0D-XQ7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l5z-4g-y2A" secondAttribute="trailing" id="Oy3-iy-3Mg"/>
+                            <constraint firstItem="t6y-cT-jDv" firstAttribute="top" secondItem="GXS-wa-CSa" secondAttribute="bottom" id="PE6-fA-NVi"/>
+                            <constraint firstItem="GXS-wa-CSa" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="QGr-ao-Td4"/>
+                            <constraint firstItem="56Q-Mt-qvN" firstAttribute="top" secondItem="Ki9-4t-H22" secondAttribute="bottom" id="R8B-SS-nva"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V8Q-IT-HZ4" secondAttribute="bottom" id="ScY-Y7-jBL"/>
+                            <constraint firstItem="dZs-Z2-F33" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="TAy-4A-cle"/>
+                            <constraint firstItem="ODu-DY-mTl" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="UOT-nK-RD7"/>
+                            <constraint firstItem="djD-Cm-Wwh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ugv-bH-h0A"/>
+                            <constraint firstItem="jOj-Yw-LKL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="X9q-rY-tMS"/>
+                            <constraint firstItem="hxf-6j-zVh" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="XM9-1W-S2t"/>
+                            <constraint firstItem="DrV-pS-fVE" firstAttribute="top" secondItem="dZs-Z2-F33" secondAttribute="bottom" id="XP7-x6-O51"/>
+                            <constraint firstItem="Ki9-4t-H22" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Y7u-LS-7d9"/>
+                            <constraint firstItem="Ki9-4t-H22" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="ZNV-lJ-2hR"/>
+                            <constraint firstItem="56Q-Mt-qvN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZZo-38-JvF"/>
+                            <constraint firstItem="t6y-cT-jDv" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="aOe-tS-3Ks"/>
+                            <constraint firstItem="6kI-Po-htn" firstAttribute="top" secondItem="rUO-fy-EV4" secondAttribute="bottom" id="bKe-pr-d3R"/>
+                            <constraint firstItem="GXS-wa-CSa" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="c9s-2e-464"/>
+                            <constraint firstItem="PO2-T7-WS8" firstAttribute="top" secondItem="8tR-rt-F7a" secondAttribute="bottom" id="cgB-28-cDA"/>
+                            <constraint firstItem="8tR-rt-F7a" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="cnM-13-3K7"/>
+                            <constraint firstItem="rUO-fy-EV4" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="d0k-oV-nMI"/>
+                            <constraint firstItem="a3s-nc-1el" firstAttribute="leading" secondItem="rUO-fy-EV4" secondAttribute="trailing" id="dgr-B9-kxB"/>
+                            <constraint firstItem="rUO-fy-EV4" firstAttribute="top" secondItem="t6y-cT-jDv" secondAttribute="bottom" id="dwL-oC-3hm"/>
+                            <constraint firstItem="a3s-nc-1el" firstAttribute="top" secondItem="PO2-T7-WS8" secondAttribute="bottom" id="eAC-Sn-yEz"/>
+                            <constraint firstItem="V8Q-IT-HZ4" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="eAl-iV-jKK"/>
+                            <constraint firstItem="t6y-cT-jDv" firstAttribute="leading" secondItem="KSh-pG-ut8" secondAttribute="trailing" id="eH8-qV-Mhh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jOj-Yw-LKL" secondAttribute="bottom" id="eKz-bJ-axH"/>
+                            <constraint firstItem="l57-mv-cWe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eZK-c5-tsS"/>
+                            <constraint firstItem="GbQ-VX-FOq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fLJ-XT-PHB"/>
+                            <constraint firstItem="GbQ-VX-FOq" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="g6p-Uk-lox"/>
+                            <constraint firstItem="DrV-pS-fVE" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="gXj-5J-ZXw"/>
+                            <constraint firstItem="djD-Cm-Wwh" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="gnC-Md-4Rb"/>
+                            <constraint firstItem="GbQ-VX-FOq" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="gue-Ik-Tyj"/>
+                            <constraint firstItem="eN2-tM-OzT" firstAttribute="top" secondItem="a3s-nc-1el" secondAttribute="bottom" id="hRE-Mk-Nei"/>
+                            <constraint firstItem="eN2-tM-OzT" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="hnF-af-s5h"/>
+                            <constraint firstItem="eN2-tM-OzT" firstAttribute="leading" secondItem="6kI-Po-htn" secondAttribute="trailing" id="ibW-BZ-b8i"/>
+                            <constraint firstItem="a3s-nc-1el" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="j5m-Sx-mFo"/>
+                            <constraint firstItem="hxf-6j-zVh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jek-OA-KuH"/>
+                            <constraint firstItem="djD-Cm-Wwh" firstAttribute="top" secondItem="56Q-Mt-qvN" secondAttribute="bottom" id="lLH-9q-igE"/>
+                            <constraint firstItem="GXS-wa-CSa" firstAttribute="leading" secondItem="ODu-DY-mTl" secondAttribute="trailing" id="ljK-GY-WJL"/>
+                            <constraint firstItem="hxf-6j-zVh" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="mzg-5b-fp2"/>
+                            <constraint firstItem="ODu-DY-mTl" firstAttribute="leading" secondItem="GbQ-VX-FOq" secondAttribute="trailing" id="n83-o2-fJA"/>
+                            <constraint firstItem="ODu-DY-mTl" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="och-8K-8zL"/>
+                            <constraint firstItem="Ki9-4t-H22" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="rLO-3Q-ST0"/>
+                            <constraint firstItem="PO2-T7-WS8" firstAttribute="width" secondItem="jOj-Yw-LKL" secondAttribute="width" id="svM-vx-Itr"/>
+                            <constraint firstItem="KSh-pG-ut8" firstAttribute="top" secondItem="ODu-DY-mTl" secondAttribute="bottom" id="txu-Ie-cKo"/>
+                            <constraint firstItem="eN2-tM-OzT" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="w6g-oF-h3t"/>
+                            <constraint firstItem="jOj-Yw-LKL" firstAttribute="leading" secondItem="V8Q-IT-HZ4" secondAttribute="trailing" id="wBx-rz-A6m"/>
+                            <constraint firstItem="8tR-rt-F7a" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="wYq-Qn-mfc"/>
+                            <constraint firstItem="a3s-nc-1el" firstAttribute="height" secondItem="jOj-Yw-LKL" secondAttribute="height" id="wp7-yc-TUx"/>
+                            <constraint firstItem="V8Q-IT-HZ4" firstAttribute="top" secondItem="6kI-Po-htn" secondAttribute="bottom" id="xq0-fv-uVv"/>
+                            <constraint firstItem="l57-mv-cWe" firstAttribute="top" secondItem="l5z-4g-y2A" secondAttribute="bottom" id="yyd-BH-4sI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonDiv" destination="8tR-rt-F7a" id="qW8-pJ-cTW"/>
+                        <outlet property="buttonMinus" destination="a3s-nc-1el" id="8XC-cb-qpB"/>
+                        <outlet property="buttonMult" destination="PO2-T7-WS8" id="g5F-qD-qhz"/>
+                        <outlet property="buttonPlus" destination="eN2-tM-OzT" id="uBZ-AM-39n"/>
+                        <outlet property="resultsLabel" destination="l57-mv-cWe" id="nQN-XS-NVN"/>
+                        <outlet property="stackLabel" destination="l5z-4g-y2A" id="jHQ-JZ-DcU"/>
+                        <outletCollection property="allButtons" destination="GbQ-VX-FOq" collectionClass="NSMutableArray" id="3FV-iv-lFP"/>
+                        <outletCollection property="allButtons" destination="8tR-rt-F7a" collectionClass="NSMutableArray" id="yAU-DS-e3g"/>
+                        <outletCollection property="allButtons" destination="GXS-wa-CSa" collectionClass="NSMutableArray" id="olh-Bv-Blx"/>
+                        <outletCollection property="allButtons" destination="ODu-DY-mTl" collectionClass="NSMutableArray" id="onT-6N-I3u"/>
+                        <outletCollection property="allButtons" destination="hxf-6j-zVh" collectionClass="NSMutableArray" id="FLN-TC-1d7"/>
+                        <outletCollection property="allButtons" destination="KSh-pG-ut8" collectionClass="NSMutableArray" id="zR5-NC-yXa"/>
+                        <outletCollection property="allButtons" destination="t6y-cT-jDv" collectionClass="NSMutableArray" id="cMG-jd-RQ3"/>
+                        <outletCollection property="allButtons" destination="PO2-T7-WS8" collectionClass="NSMutableArray" id="nuG-kr-P35"/>
+                        <outletCollection property="allButtons" destination="Ki9-4t-H22" collectionClass="NSMutableArray" id="Oyz-dr-vn5"/>
+                        <outletCollection property="allButtons" destination="dZs-Z2-F33" collectionClass="NSMutableArray" id="WYM-gY-Qcr"/>
+                        <outletCollection property="allButtons" destination="rUO-fy-EV4" collectionClass="NSMutableArray" id="J6X-pw-VPm"/>
+                        <outletCollection property="allButtons" destination="a3s-nc-1el" collectionClass="NSMutableArray" id="WpT-gf-Dej"/>
+                        <outletCollection property="allButtons" destination="56Q-Mt-qvN" collectionClass="NSMutableArray" id="i4C-sl-jDz"/>
+                        <outletCollection property="allButtons" destination="DrV-pS-fVE" collectionClass="NSMutableArray" id="Soa-E5-jvS"/>
+                        <outletCollection property="allButtons" destination="6kI-Po-htn" collectionClass="NSMutableArray" id="aSa-dg-BeM"/>
+                        <outletCollection property="allButtons" destination="eN2-tM-OzT" collectionClass="NSMutableArray" id="J0h-HZ-ZiU"/>
+                        <outletCollection property="allButtons" destination="djD-Cm-Wwh" collectionClass="NSMutableArray" id="fjX-WV-rqx"/>
+                        <outletCollection property="allButtons" destination="V8Q-IT-HZ4" collectionClass="NSMutableArray" id="Gzp-of-IRE"/>
+                        <outletCollection property="allButtons" destination="jOj-Yw-LKL" collectionClass="NSMutableArray" id="YG1-7a-JP3"/>
+                        <outletCollection property="signButtons" destination="8tR-rt-F7a" collectionClass="NSMutableArray" id="KqC-LU-g54"/>
+                        <outletCollection property="signButtons" destination="PO2-T7-WS8" collectionClass="NSMutableArray" id="LM7-GP-LG4"/>
+                        <outletCollection property="signButtons" destination="a3s-nc-1el" collectionClass="NSMutableArray" id="W5Z-bN-0fW"/>
+                        <outletCollection property="signButtons" destination="eN2-tM-OzT" collectionClass="NSMutableArray" id="4jR-eT-0n7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
